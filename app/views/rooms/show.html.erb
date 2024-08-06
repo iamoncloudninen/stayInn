@@ -1,0 +1,16 @@
+<h1>Rooms#show</h1>
+<p>Find me in app/views/rooms/show.html.erb</p>
+<% if @room.user.id == current_user.id %>
+ <%= link_to"編集", edit_room_path(@room) %>
+<% end %>
+
+<%= attachment_image_tag @room, :image %>
+
+<%= @room.title %>
+
+<%= simple_format @room.body %>
+
+<%= @room.price %>
+
+<%= @room.address %>
+
