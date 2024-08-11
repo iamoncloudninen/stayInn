@@ -1,5 +1,6 @@
 class RoomsController < ApplicationController
   def index
+    @rooms = Room.all
   end
 
   def show
@@ -24,7 +25,7 @@ class RoomsController < ApplicationController
   def update
     @room = Room.find(params[:id])
     @room.update(room_params)
-    redirect_to room_path(@room)
+    redirect_to rooms_path(@rooms)
   end
 
   private
