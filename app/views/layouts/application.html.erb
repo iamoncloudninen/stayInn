@@ -14,20 +14,25 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <%= link_to root_path, class: "navbar-item" do %>
-      <h1>Potepan Share</h1>
-    <% end %>
-
-    <% if user_signed_in? %>
-     <p>ログイン中です。</p>
-     <%= button_to "ログアウト", destroy_user_session_path, method: :delete %>
-    <% else %>
-     <p>ログインしていません。</p>
-     <%= link_to "ログイン", new_user_session_path %>
-     <%= link_to "新規登録", new_user_registration_path %>
-    <% end %>
+    <header>
+      <%= link_to root_path, class: "navbar-item" do %>
+        <h1>Potepan Share</h1>
+      <% end %>
+     <div class="header-item">
+      <% if user_signed_in? %>
+       <%= button_to "ログアウト", destroy_user_session_path, method: :delete %>
+      <% else %>
+       <%= link_to "ログイン", new_user_session_path, class: "login-button"%>
+       <%= link_to "新規登録", new_user_registration_path, class: "new-button"%>
+      <% end %>
+     </div>
+    </header>
 
 
     <%= yield %>
+    <footer>
+     <h1>Potepan Share</h1>
+     <p>Copyright ©︎ Potepan Share 2024 ALL rights reserved</p>
+    </footer>
   </body>
 </html>

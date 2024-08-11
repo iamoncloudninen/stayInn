@@ -15,3 +15,41 @@
  */
 
  @import "bulma";
+
+header {
+    height: 100px;
+    width: 100%;
+    color: white;
+    background-color: navy;
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    color: white;
+    margin-left: 20px;
+    margin-right: 900px;
+}
+
+.header-item {
+    display: inline-block;
+}
+
+.login-button {
+    color: white;
+    margin: 0 20px;
+}
+
+.new-button {
+    color: white;
+    padding: 12px;
+    background-color: orange;
+    border-radius: 6px;
+}
+
+footer {
+    height: 400px;
+    background-color: navy;
+    color: white;
+}
+  
