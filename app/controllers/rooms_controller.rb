@@ -1,6 +1,12 @@
 class RoomsController < ApplicationController
   def index
-    @rooms = Room.all
+    if params[:address].present?
+      @rooms = Room.where('address LIKE ?', "%#{params[:address]}%")
+    elsif params[:address] == nil || ''
+      @rooms= Room.all
+    else 
+      @rooms= Room.none
+    end
   end
 
   def show

@@ -1,3 +1,10 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-<p>ホーム画面</p>
+<div class="home-index">
+ <h1>Potepan Shareで<br> 
+ まだ体験したことのない<br> 
+ 旅をしよう</h1>
+ <%= form_tag({controller:"rooms",action:"index"}, method: :get) do %>
+    <%= text_field_tag :address %>
+    <%= submit_tag '検索' %>
+ <% end %>
+</div>
+

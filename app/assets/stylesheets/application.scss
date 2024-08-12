@@ -16,8 +16,14 @@
 
  @import "bulma";
 
+ * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+   }  
+
 header {
-    height: 100px;
+    height: 80px;
     width: 100%;
     color: white;
     background-color: navy;
@@ -25,9 +31,9 @@ header {
     align-items: center;
 }
 
-header h1 {
-    color: white;
-    margin-left: 20px;
+.header-logo {
+    height: 40px;
+    margin-left: 30px;
     margin-right: 900px;
 }
 
@@ -47,9 +53,23 @@ header h1 {
     border-radius: 6px;
 }
 
+.main {
+    height: 1800px;
+}
+
 footer {
-    height: 400px;
+    height: 470px;
     background-color: navy;
     color: white;
+}
+
+.footer-logo {
+    height: 40px;
+    margin-top: 200px;
+    margin-left: 30px;
+}
+
+footer p {
+    margin-left: 30px;
 }
   

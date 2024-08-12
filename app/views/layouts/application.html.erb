@@ -11,12 +11,9 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
     <header>
-      <%= link_to root_path, class: "navbar-item" do %>
-        <h1>Potepan Share</h1>
+      <%= link_to root_path do %>
+        <img src="https://rails-02-sample.herokuapp.com/assets/common/logo.png" alt="ヘッダーロゴ" class="header-logo">
       <% end %>
      <div class="header-item">
       <% if user_signed_in? %>
@@ -27,11 +24,15 @@
       <% end %>
      </div>
     </header>
-
-
-    <%= yield %>
+    <div class="main">
+     <p class="notice"><%= notice %></p>
+     <p class="alert"><%= alert %></p>
+     <%= yield %>
+    </div>
     <footer>
-     <h1>Potepan Share</h1>
+     <%= link_to root_path do %>
+      <img src="https://rails-02-sample.herokuapp.com/assets/common/logo.png" alt="フッターロゴ" class="footer-logo">
+     <% end %>
      <p>Copyright ©︎ Potepan Share 2024 ALL rights reserved</p>
     </footer>
   </body>
