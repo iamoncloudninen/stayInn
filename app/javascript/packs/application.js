@@ -5,12 +5,21 @@
 //= require jquery　
 //= require jquery_ujs
 
-
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
-import * as ActiveStorage from "@rails/activestorage"
+import { start } from "@rails/activestorage"
 import "channels"
+import $ from 'jquery';
+
+   window.$ = $;
+   window.jQuery = $;   
 
 Rails.start()
 Turbolinks.start()
-ActiveStorage.start()
+start()
+
+$(document).ready(function() {
+    $("#user-menu").click(function() {
+        $("#menu").toggle();
+    });
+}); 

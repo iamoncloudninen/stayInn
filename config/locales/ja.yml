@@ -1,0 +1,38 @@
+# config/locales/ja.yml
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+    attributes:
+      user:
+        username: ユーザー名
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: 確認用パスワード
+        current_password: 現在のパスワード
+  devise:
+    sessions:
+      signed_out: "ログアウトしました。"
+      signed_in: "ログインしました。"
+    registrations:
+      signed_up: "アカウント登録が完了しました。"
+    failure:
+      invalid: "ログイン情報が正しくありません。"
+      already_authenticated: "既にログインしています。"
+      unauthenticated: "ログインしてください。"
+      unconfirmed: "アカウントが確認されていません。"
+      locked: "アカウントがロックされています。"
+      not_found_in_database: "メールアドレスまたはパスワードが違います。"
+      timeout: "セッションがタイムアウトしました。再度ログインしてください。"
+      inactive: "アカウントが無効です。"
+      last_attempt: "これが最後の試みです。次回失敗するとアカウントがロックされます。"
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      not_saved:
+        one: "1つのエラーにより保存できませんでした"
+        other: "%{count}件のエラーにより保存できませんでした"
+
+
+
+

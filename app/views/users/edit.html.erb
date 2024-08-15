@@ -1,2 +1,17 @@
 <h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<%= form_for @user do |f| %>
+
+  <%= f.label :profile_image, "アイコン画像" %>
+  <%= f.file_field :profile_image %>
+
+  <%= f.label :username, "ユーザー名" %>
+  <%= f.text_field :username %>
+
+  <%= f.label :profile, "自己紹介" %>
+  <%= f.text_area :profile %>
+
+  <%= f.submit "更新" %>
+
+  <%= link_to "キャンセル", profile_info_user_path %>
+
+<% end %>

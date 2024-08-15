@@ -1,0 +1,11 @@
+<p class="setting">設定</p>
+<%= link_to "アカウント", account_info_user_path %>
+<%= link_to "プロフィール", profile_info_user_path %>
+
+<h2>アカウント</h2>
+<% if @user.id == current_user.id %>
+ <%= link_to '編集', edit_user_registration_path %>
+<% end %>
+
+<p>メールアドレス: <%= @user.email %></p>
+<p>パスワード: *********</p>

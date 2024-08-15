@@ -17,7 +17,20 @@
       <% end %>
      <div class="header-item">
       <% if user_signed_in? %>
-       <%= button_to "ログアウト", destroy_user_session_path, method: :delete %>
+       <div id="user-menu">
+       <%= attachment_image_tag current_user, :profile_image, fallback: "no_image.png", size: "50x50", class: "round-image" %>
+       <p><%= current_user.username %></p>
+       <p>▼</p>
+       </div>
+       <div id="menu" style="display: none;">
+        <ul>
+         <li><%= link_to "施設の新規登録", new_room_path %></li>
+         <li><%= link_to "予約済み一覧", new_room_path %></li>
+         <li><%= link_to "登録済み一覧", rooms_path %></li>
+         <li><%= link_to "アカウント設定", account_info_user_path(current_user) %></li>
+         <li><%= button_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+        </ul>
+       </div> 
       <% else %>
        <%= link_to "ログイン", new_user_session_path, class: "login-button"%>
        <%= link_to "新規登録", new_user_registration_path, class: "new-button"%>

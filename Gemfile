@@ -60,3 +60,6 @@ gem 'devise'
 gem "refile", require: "refile/rails", github: "manfe/refile"
 gem "refile-mini_magick"
 gem "bulma-rails"
+gem 'bcrypt', '~> 3.1.7' 
+gem 'rails-i18n'
+

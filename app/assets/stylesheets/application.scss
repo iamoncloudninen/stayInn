@@ -44,6 +44,7 @@ header {
 .login-button {
     color: white;
     margin: 0 20px;
+    text-decoration: none;
 }
 
 .new-button {
@@ -51,7 +52,25 @@ header {
     padding: 12px;
     background-color: orange;
     border-radius: 6px;
+    text-decoration: none;
 }
+
+.round-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+#user-menu {
+    display: flex;
+}
+
+#menu {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+}  
 
 .main {
     height: 1800px;
