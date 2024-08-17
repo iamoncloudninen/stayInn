@@ -7,7 +7,11 @@ Rails.application.routes.draw do
       get :profile_info
     end
   end   
-  resources :rooms
+  resources :rooms do
+    collection do
+      get :own
+    end
+  end
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end

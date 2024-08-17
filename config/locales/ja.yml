@@ -3,6 +3,7 @@ ja:
   activerecord:
     models:
       user: ユーザー
+      room: 施設
     attributes:
       user:
         username: ユーザー名
@@ -10,6 +11,11 @@ ja:
         password: パスワード
         password_confirmation: 確認用パスワード
         current_password: 現在のパスワード
+      room: 
+        title: 施設名
+        body: 紹介文
+        address: 住所
+        price: 金額
   devise:
     sessions:
       signed_out: "ログアウトしました。"

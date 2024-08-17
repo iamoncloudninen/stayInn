@@ -6,6 +6,14 @@
     background-image: url(https://rails-02-sample.herokuapp.com/assets/home/cover-lg.jpg);
 }
 
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
 h1 {
     color: white;
     font-size: 80px;
@@ -14,8 +22,34 @@ h1 {
     line-height: 100px;
 }
 
-.search-form {
+.home-search-form {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 150px;
+    width: 700px;
+    margin: 0 auto;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-search-form input[type="text"] {
+    width: 600px;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+.home-search-form input[type="submit"] {
+    width: 600px;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: pink;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 h2 {

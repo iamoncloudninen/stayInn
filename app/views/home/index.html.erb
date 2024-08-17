@@ -2,9 +2,9 @@
   <h1>Potepan Shareで<br> 
   まだ体験したことのない<br> 
   旅をしよう</h1>
-  <div class="search-form">
+  <div class="home-search-form">
    <%= form_tag({controller:"rooms",action:"index"}, method: :get) do %>
-     <%= text_field_tag :address %>
+     <%= text_field_tag :address, params[:address], placeholder: "エリア名を入力" %>
      <%= submit_tag '検索' %>
    <% end %>
   </div>

@@ -1,22 +1,22 @@
-<h1>Rooms#edit</h1>
-<p>Find me in app/views/rooms/edit.html.erb</p>
+<h2>施設情報の編集</h2>
 
 <%= form_for @room do |f| %>
-    <%= f.label :title %>
+    <%= f.label :title, "施設名" %>
     <%= f.text_field :title %>
 
-    <%= f.label :body %>
+    <%= f.label :body, "紹介文" %>
     <%= f.text_area :body %>
 
-    <%= f.label :price %>
+    <%= f.label :price, "金額" %>
     <%= f.text_field :price %>
 
-    <%= f.label :address %>
+    <%= f.label :address, "住所" %>
     <%= f.text_field :address %>
 
-    <%= f.label :image %>
+    <%= f.label :image, "画像" %>
     <%= f.file_field :image %>
 
     <%= f.submit %>
+    <%= link_to "キャンセル", :back %>
 
 <% end %>
