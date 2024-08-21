@@ -1,0 +1,30 @@
+<h2>予約済み一覧</h2>
+
+<table>
+   <thead>   
+    <tr>
+      <th>画像</th>
+      <th>施設名</th>
+      <th>紹介文</th>
+      <th>合計料金</th>
+      <th>チェックイン</th>
+      <th>チェックアウト</th>
+      <th>予約確定日時</th>
+    </tr>
+   </thead>
+   <% @reservations.each do |reservation| %>
+    <tbody>
+     <tr>
+     <td><%= attachment_image_tag reservation.room, :image, fallback: "no_room_image.png", size: "100x75" %></td>
+     <td><%= link_to reservation.room.title, room_path(reservation.room) %></td>
+     <td class="text-cell"><%= reservation.room.body %></td>
+     <td><%= number_to_currency((reservation.check_out - reservation.check_in).to_i / 1.day * reservation.number_of_guests * reservation.room.price) %></td>
+     <td><%= reservation.check_in.to_s(:date_jp) %></td>
+     <td><%= reservation.check_out.to_s(:date_jp) %></td>
+     <td><%= reservation.created_at.to_s(:datetime_jp) %></td>
+     <td><%= link_to "削除", reservation_path(reservation), method: :delete, data: { confirm: "本当に削除しますか？" }, class: "delete-link" %></td>
+
+     </tr>
+    </tbody>
+   <% end %>
+</table>

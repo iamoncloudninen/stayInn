@@ -16,6 +16,10 @@ ja:
         body: 紹介文
         address: 住所
         price: 金額
+      reservation:
+        check_in: チェックイン日
+        check_out: チェックアウト日
+        number_of_guests: 人数
   devise:
     sessions:
       signed_out: "ログアウトしました。"

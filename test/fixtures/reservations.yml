@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  room: one
+  check_in_date: 2024-08-17 23:15:31
+  check_out_date: MyString
+  datetime: MyString
+  days: 1
+  number_of_guests: 1
+  total_price: MyString
+  decimal: 1
+
+two:
+  user: two
+  room: two
+  check_in_date: 2024-08-17 23:15:31
+  check_out_date: MyString
+  datetime: MyString
+  days: 1
+  number_of_guests: 1
+  total_price: MyString
+  decimal: 1

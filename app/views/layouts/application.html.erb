@@ -25,8 +25,8 @@
        <div id="menu" style="display: none;">
         <ul>
          <li><%= link_to "施設の新規登録", new_room_path %></li>
-         <li><%= link_to "予約済み一覧", new_room_path %></li>
          <li><%= link_to "登録済み一覧", own_rooms_path %></li>
+         <li><%= link_to "予約済み一覧", reservations_path %></li>
          <li><%= link_to "アカウント設定", account_info_user_path(current_user) %></li>
          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
         </ul>

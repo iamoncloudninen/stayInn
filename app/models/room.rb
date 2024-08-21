@@ -1,5 +1,6 @@
 class Room < ApplicationRecord
     belongs_to :user
+    has_many :reservations
     attachment :image
     validates :title, presence: true
     validates :body, presence: true

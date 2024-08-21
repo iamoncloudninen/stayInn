@@ -4,7 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   attachment :profile_image
-  has_many :rooms, dependent: :destroy
+  has_many :rooms
+  has_many :reservations, dependent: :destroy
   validates :username, presence: true
   validates :email, uniqueness: true, presence: true
   validates :password, presence: true, confirmation: true, if: :password_required?

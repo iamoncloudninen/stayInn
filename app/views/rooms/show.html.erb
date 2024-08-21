@@ -1,7 +1,7 @@
 <div class="search-form">
  <%= form_tag({controller:"rooms",action:"index"}, method: :get) do %>
-  <%= text_field_tag :address, params[:address], placeholder: "エリア名を入力" %>
-  <%= text_field_tag :keyword, params[:keyword], placeholder: "キーワードを入力" %>
+  <%= text_field_tag :address, params[:address], autocomplete: "off", placeholder: "エリア名を入力" %>
+  <%= text_field_tag :keyword, params[:keyword], placeholder: "キーワードを入力", autocomplete: "off" %>
   <%= submit_tag '検索' %>
  <% end %>
 </div>
@@ -21,21 +21,10 @@
     <p class="star">★★★★★</p>
     <p class="room-body"><%= simple_format @room.body %></p>
     <p class="room-price">¥<%= number_with_delimiter(@room.price) %>〜</p>
-    <div class="fields">
-     <div class="field">
-      <%= f.label :checkin ,"チェックイン" %><br>
-      <%= f.date_field :checkin %>
-     </div>
-     <div class="field">
-      <%= f.label :checkout ,"チェックアウト" %><br>
-      <%= f.date_field :checkout %>
-     </div>
-     <div class="field">
-      <%= f.label :people ,"人数" %><br>
-      <%= f.text_field :people, placeholder: "0 人" %>
-     </div>
-    </div>
   </div>
 <% end %>
+
+<%= render 'reservations/form', reservation: @reservation %>    
+
 
 
