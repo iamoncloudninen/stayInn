@@ -11,6 +11,42 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <%= link_to root_path do %>
+        <img src="https://rails-02-sample.herokuapp.com/assets/common/logo.png" alt="ヘッダーロゴ" class="header-logo">
+      <% end %>
+     <div class="header-item">
+      <% if user_signed_in? %>
+       <div id="user-menu">
+       <%= attachment_image_tag current_user, :profile_image, fallback: "no_image.png", size: "50x50", class: "round-image" %>
+       <p><%= current_user.username %></p>
+       <p>▼</p>
+       </div>
+       <div id="menu" style="display: none;">
+        <ul>
+         <li><%= link_to "施設の新規登録", new_room_path %></li>
+         <li><%= link_to "登録済み一覧", own_rooms_path %></li>
+         <li><%= link_to "予約済み一覧", reservations_path %></li>
+         <li><%= link_to "アカウント設定", account_info_user_path(current_user) %></li>
+         <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+        </ul>
+       </div> 
+      <% else %>
+       <%= link_to "ログイン", new_user_session_path, class: "login-button"%>
+       <%= link_to "新規登録", new_user_registration_path, class: "new-button"%>
+      <% end %>
+     </div>
+    </header>
+    <div class="main">
+     <p class="notice"><%= notice %></p>
+     <p class="alert"><%= alert %></p>
+     <%= yield %>
+    </div>
+    <footer>
+     <%= link_to root_path do %>
+      <img src="https://rails-02-sample.herokuapp.com/assets/common/logo.png" alt="フッターロゴ" class="footer-logo">
+     <% end %>
+     <p>Copyright ©︎ Potepan Share 2024 ALL rights reserved</p>
+    </footer>
   </body>
 </html>

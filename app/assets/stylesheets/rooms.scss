@@ -1,0 +1,126 @@
+// Place all the styles related to the Rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.search-form {
+    background-color: lightgrey;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+.search-form form {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.search-form input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-form input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: grey;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.rooms-count {
+    font-size: 30px;
+    padding: 40px;
+}
+
+.hotel-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.hotel-card {
+    background-color: lightcyan;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 600px;
+    width: 400px;
+    margin: 40px;
+}
+
+.hotel-body {
+    padding: 20px;
+}
+
+.room-image {
+    width: 100%;
+    height: 200px;
+}
+
+.room-title {
+    font-size: 20px;
+    color: grey;
+}
+
+.room-address {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: grey;
+}
+
+.star {
+    color: rgb(242, 201, 16);
+    margin-bottom: 10px;
+}
+
+.room-body {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.room-price {
+    font-size: 20px;
+    padding-top: 40px;
+    color: lightsalmon;
+}
+
+.room-button {
+    background-color: white;
+}
+
+.show-button {
+    background-color: lightpink;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.detail {
+    height: 400px;
+    width: 800px;
+    padding: 50px;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px;
+}
+  
+th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.text-cell {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    max-width: 200px;
+}
+  

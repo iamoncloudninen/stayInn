@@ -1,0 +1,22 @@
+<h2>施設情報の編集</h2>
+
+<%= form_for @room do |f| %>
+    <%= f.label :title, "施設名" %>
+    <%= f.text_field :title %>
+
+    <%= f.label :body, "紹介文" %>
+    <%= f.text_area :body %>
+
+    <%= f.label :price, "金額" %>
+    <%= f.text_field :price %>
+
+    <%= f.label :address, "住所" %>
+    <%= f.text_field :address %>
+
+    <%= f.label :image, "画像" %>
+    <%= f.file_field :image %>
+
+    <%= f.submit %>
+    <%= link_to "キャンセル", :back %>
+
+<% end %>

@@ -1,0 +1,27 @@
+<div class="search-form">
+ <%= form_tag({controller:"rooms",action:"index"}, method: :get) do %>
+  <%= text_field_tag :address, params[:address], placeholder: "エリア名を入力" %>
+  <%= text_field_tag :keyword, params[:keyword], placeholder: "キーワードを入力" %>
+  <%= submit_tag '検索' %>
+ <% end %>
+</div>
+
+<p class="rooms-count"><%= @rooms.count %> 件が見つかりました。</p>
+
+<div class="hotel-card-container">
+ <% @rooms.each do |room| %>
+  <div class="hotel-card">
+   <div class="hotel-details">
+    <%= attachment_image_tag room, :image, fallback: "no_room_image.png", class: "room-image" %>
+    <div class="hotel-body">
+      <h5 class="room-title"><%= room.title %></h5>
+      <p class="room-address"><%= room.address %></p>
+      <p class="star">★★★★★</p>
+      <p class="room-body"><%= room.body %></p>
+      <p class="room-price">¥<%= number_with_delimiter(room.price) %>〜</p>
+      <p class="show-button"><%= link_to room_path(room) do %>詳細はこちら<% end %></p>
+    </div>
+   </div>
+  </div>
+ <% end %>
+</div>

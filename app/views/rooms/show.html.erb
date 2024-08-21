@@ -1,0 +1,30 @@
+<div class="search-form">
+ <%= form_tag({controller:"rooms",action:"index"}, method: :get) do %>
+  <%= text_field_tag :address, params[:address], autocomplete: "off", placeholder: "エリア名を入力" %>
+  <%= text_field_tag :keyword, params[:keyword], placeholder: "キーワードを入力", autocomplete: "off" %>
+  <%= submit_tag '検索' %>
+ <% end %>
+</div>
+
+<p class="back-button"><%= link_to "←戻る", :back %></p>
+
+<% if @room.user.id == current_user.id %>
+ <p class="edit-button"><%= link_to"編集", edit_room_path(@room) %></p>
+<% end %>
+
+<%= attachment_image_tag @room, :image, fallback: "no_room_image.png", size: "400x300", class: "room-image.pic" %>
+
+<%= form_with(model: @room) do |f| %>
+  <div class="hotel-card detail">
+    <h5 class="room-title"><%= @room.title %></h5>
+    <p class="room-address"><%= @room.address %></p>
+    <p class="star">★★★★★</p>
+    <p class="room-body"><%= simple_format @room.body %></p>
+    <p class="room-price">¥<%= number_with_delimiter(@room.price) %>〜</p>
+  </div>
+<% end %>
+
+<%= render 'reservations/form', reservation: @reservation %>    
+
+
+

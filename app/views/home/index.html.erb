@@ -1,0 +1,18 @@
+<div class="home-index">
+  <h1>Potepan Shareで<br> 
+  まだ体験したことのない<br> 
+  旅をしよう</h1>
+  <div class="home-search-form">
+   <%= form_tag({controller:"rooms",action:"index"}, method: :get) do %>
+     <%= text_field_tag :address, params[:address], placeholder: "エリア名を入力" %>
+     <%= submit_tag '検索' %>
+   <% end %>
+  </div>
+</div>
+<h2>おすすめのエリア</h2>
+<div class="area-image-container">
+  <a href="http://localhost:3000/rooms?address=%E6%9D%B1%E4%BA%AC&commit=%E6%A4%9C%E7%B4%A2"><img src="https://rails-02-sample.herokuapp.com/assets/home/recommend-area/tokyo.jpg" class="area-image"><span>東京<br>Tokyo</span></a>
+  <a href="http://localhost:3000/rooms?address=%E5%A4%A7%E9%98%AA&commit=%E6%A4%9C%E7%B4%A2"><img src="https://rails-02-sample.herokuapp.com/assets/home/recommend-area/osaka.jpg" class="area-image"><span>大阪<br>Osaka</span></a>
+  <a href="http://localhost:3000/rooms?address=%E4%BA%AC%E9%83%BD&commit=%E6%A4%9C%E7%B4%A2"><img src="https://rails-02-sample.herokuapp.com/assets/home/recommend-area/kyoto.jpg" class="area-image"><span>京都<br>Kyoto</span></a>
+  <a href="http://localhost:3000/rooms?address=%E6%9C%AD%E5%B9%8C&commit=%E6%A4%9C%E7%B4%A2"><img src="https://rails-02-sample.herokuapp.com/assets/home/recommend-area/sapporo.jpg" class="area-image"><span>札幌<br>Sapporo</span></a>
+</div>
